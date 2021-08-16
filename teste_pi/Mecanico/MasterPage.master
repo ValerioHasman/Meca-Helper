@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="Mecanico_MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <link rel="shortcut icon" href="../img/ICONE.ico" type="image/x-icon" />
+    <link href="../Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="../Content/masterpage.css" rel="stylesheet" />
+    <script src="../Scripts/jquery-3.6.0.min.js"></script>
+    <script src="../Scripts/bootstrap.bundle.min.js"></script>
+    <script src="../Scripts/Chart.min.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+
+    <form id="form1" runat="server">
+        <div>
+
+            <div class="overlay"></div>
+
+            <div class="wrapper">
+                <!-- Sidebar  -->
+                <nav id="sidebar" class="position-fixed ">
+                    <div class="sidebar-header">
+                        <h3>MecaHelper</h3>
+                        <asp:Literal ID="ltlNome" runat="server"></asp:Literal>
+                    </div>
+                    <div class="px-3">
+                        <div class="ml-3 my-3">
+                            <a href="Registros.aspx">Registros</a>
+                        </div>
+                        <hr />
+                        <div class="ml-3 mt-2">
+                            <a href="AgendadeCliente.aspx">Agenda de Clientes</a>
+                        </div>
+                        <hr />
+                        <div class="ml-3 mt-2">
+                            <a href="Graficos.aspx">Gráficos</a>
+                        </div>
+                        <hr />
+                        <div class="ml-3 mt-2">
+                            <a href="Lixeira.aspx" style="color: #fdd">Histórico de Exclusão</a>
+                        </div>
+                        <hr />
+                        <div class="ml-3 mt-2">
+                            <a href="SobreOSite.aspx">Sobre o Site</a>
+                        </div>
+
+                    </div>
+
+                    <asp:LinkButton ID="LinkButton1" CssClass="offset-3 col-6 btn btn-outline-danger  mt-5 " Text="Sair" OnClick="btnSair_Click" runat="server">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-box-arrow-in-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M10 3.5a.5.5 0 0 0-.5-.5h-8a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-2a.5.5 0 0 1 1 0v2A1.5 1.5 0 0 1 9.5 14h-8A1.5 1.5 0 0 1 0 12.5v-9A1.5 1.5 0 0 1 1.5 2h8A1.5 1.5 0 0 1 11 3.5v2a.5.5 0 0 1-1 0v-2z" />
+                            <path fill-rule="evenodd"
+                                d="M4.146 8.354a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H14.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3z" />
+                        </svg>
+                        Sair
+                    </asp:LinkButton>
+                </nav>
+
+                <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"></asp:ContentPlaceHolder>
+
+            </div>
+            <footer class="col-12 text-center text-white bg-dark ">
+                ©Mecahelper
+            </footer>
+        </div>
+    </form>
+
+    
+    <%--Script Navbar--%>
+    <script src="../Scripts/navbar.js"></script>
+</body>
+</html>
