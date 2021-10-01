@@ -2,7 +2,7 @@ create database `mecabd`
 default character set utf8
 default collate utf8_general_ci;
 
-use `mecabd`
+use `mecabd`;
 
 CREATE TABLE `mecanico` (
   `mec_id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
