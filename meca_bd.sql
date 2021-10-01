@@ -71,3 +71,4 @@ CREATE TABLE `servico` (
   `ser_hora` date DEFAULT NULL,
   `ser_preco` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
